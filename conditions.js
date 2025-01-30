@@ -2,9 +2,10 @@
 let age = 20;
 
 if (age >= 18) {
-    console.log("Siz böyüksünüz və səs verə bilərsiniz.");
+    console.log("Siz yetkinsiniz.");
+} else {
+    console.log("Siz yetkin deyilsiniz.")
 }
-// ✅ Çıxış: Siz böyüksünüz və səs verə bilərsiniz.
 
 
 
@@ -82,7 +83,7 @@ console.log("Bugün: " + dayName);
 
 // 5. Ternary Operator (? :) --> Ternary operatorudur. If-else in bir sətirdə yazıla bilən versiyasıdır.
 let age_1 = 18;
-let message = (age_1 >= 18) ? "Yetkin yaşdasınız" : "Yetkin deyilsiniz"; // Cavab "Yetkin yaşdasınız" olacaq
+let message = (age_1 >= 18) ? "Yetkin yaşdasiniz" : "Yetkin deyilsiniz"; // Cavab "Yetkin yaşdasınız" olacaq
 console.log(message);
 
 // Burda (age >= 18) şərtdir. "?" işarəsindən sonra true olan halda qayıdacaq cavab yazılır, ":" ishtərəsindən sonra false olan halda qayıdacaq cavab yazılır. İndi if-else ilə arasındakı fərqi görmək üçün aşağıdakı nümunəyə baxaq
@@ -90,7 +91,7 @@ let age_2 = 18;
 
 let message_1;
 if (age_2 >= 18) {
-    message_1 = "Yetkinyasınız";
+    message_1 = "Yetkinyasiniz";
 } else {
     message_1 = "Yetkin deyilsiniz";
 }

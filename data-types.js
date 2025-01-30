@@ -69,8 +69,15 @@ console.log(person);
 console.log(typeof person);
 
 
-// 2. Array --> Array bir neçə dəyəri birlikdə saxlamaq üçün istifadə olunur. Burda hər bir data index ilə saxlanılır. Yəni hər bir datanın index-i olur
-let numbers = [1, 2, 3, 4, 5];
-console.log(numbers);
+// 2. Array
 
-console.log(typeof numbers);
+let fruits = ["alma", "banan", "portağal"]; // array yaratmaq
+
+// Array-in uzunluğunu ekrana yazdırmaq
+console.log("Array uzunluğu: " + fruits.length);
+
+// İlk elementi ekranda göstərmək
+console.log("İlk element: " + fruits[0]);
+
+// Son elementi ekranda göstərmək
+console.log("Son element: " + fruits[fruits.length - 1]);

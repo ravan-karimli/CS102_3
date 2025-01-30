@@ -27,19 +27,6 @@ for (let key in person) {
 // city: New York
 
 
-let array = [1, 2, 3, 4, 5];
-
-for (let index in array) {
-    console.log(index + ": " + array[index]);
-}
-// ✅ Çıxış: 
-// 0: 1
-// 1: 2
-// 2: 3
-// 3: 4
-// 4: 5
-
-
 
 // 3. for...of Loop --> Obyektlərdəki dəyərləri və ya massivlərin elementlərini təkrarlamaq üçün istifadə olunur.
 let numbers = [10, 20, 30, 40, 50];

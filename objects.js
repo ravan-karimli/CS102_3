@@ -62,17 +62,6 @@ for (let key in person_4) {
 }
 
 
-// 6. Obyektə Metod (Function) Əlavə Etmək
-let user = {
-    username: "mahaddin",
-    greet: function() {
-        return `Hello, ${this.username}!`;
-    }
-};
-
-console.log(user.greet());  // ✅ Çıxış: Hello, mahaddin!
-
-
 // 7. Obyektin Açarlari və Dəyərlərini Object.keys(), Object.values(), Object.entries() ilə Almaq
 let car = {
     brand: "Tesla",
@@ -112,55 +101,3 @@ Object.freeze(car_1);
 car_1.model = "X6";  // ❌ Dəyişmir
 car_1.year = 2024;   // ❌ Əlavə edilmir
 console.log(car_1);  // ✅ Çıxış: { brand: "BMW", model: "X5" }
-
-
-// 11. Object.seal(obj) --> Obyekti "möhürləyir": Mövcud xüsusiyyətləri dəyişmək mümkündür, amma yenisini əlavə və ya silmək olmaz.
-let book = { title: "JS Guide", pages: 500 };
-Object.seal(book);
-
-book.pages = 550;       // ✅ Dəyişmək olar
-book.author = "John";   // ❌ Əlavə edilmir
-delete book.title;      // ❌ Silinmir
-console.log(book);      // ✅ Çıxış: { title: "JS Guide", pages: 550 }
-
-
-// 12. Object.hasOwnProperty(prop) --> Obyektin müəyyən açara malik olub-olmadığını yoxlayır.
-let user_2 = {
-    name: "Mahaddin",
-    age: 18
-}
-
-console.log(user_2.hasOwnProperty("age")); // ✅ true --> Çünki age key-i var
-console.log(user_2.hasOwnProperty("salary")); // ❌ false --> Çünki salary key-i yoxdur
-
-
-// 13. Object.getOwnPropertyNames(obj) --> Obyektin açara malik xüsusiyyətləri yoxlayır.
-let user_3 = {
-    name: "Mahaddin",
-    age: 18
-}
-
-console.log(Object.getOwnPropertyNames(user_3)); // ✅ ["name", "age"]
-
-
-// 14. Object.getOwnPropertyDescriptors(obj) --> Obyektin açara malik xüsusiyyətlərinin təsvirini yoxlayır.
-let user_4 = {
-    name: "Mahaddin",
-    age: 18
-}
-
-console.log(Object.getOwnPropertyDescriptors(user_4)); // ✅ { name: { value: "Mahaddin", writable: true, enumerable: true, configurable: true }, age: { value: 18, writable: true, enumerable: true, configurable: true } }
-
-
-// 15. Object.create(proto, propertiesObject) --> Başqa obyektə əsaslanan yeni obyekt yaratmaq üçün istifadə olunur
-let person_1 = { greet: function() { return "Hello"; } };
-let student = Object.create(person_1);
-
-console.log(student.greet()); // ✅ Çıxış: "Hello"
-
-
-// 16. Object.fromEntries(array) --> Array-i obyektə çevirir (entries metodunun əksi).
-let entries = [["name", "Mahaddin"], ["age", 25], ["city", "Baku"]];
-let newObj = Object.fromEntries(entries);
-
-console.log(newObj);    // ✅ Çıxış: { name: "Mahaddin", age: 25, city: "Baku" }
